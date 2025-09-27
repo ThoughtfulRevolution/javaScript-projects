@@ -1,15 +1,3 @@
-// const win = `You Win!`;
-// const lose = `You lose!`;
-// const tie = `Its a Tie! Try again.`;
-// let refinedHumanSelection = getHumanChoice();
-// refinedHumanSelection = refinedHumanSelection.charAt(0).toUpperCase() + refinedHumanSelection.slice(1).toLowerCase();
-// let refinedComputerSelection = getComputerChoice();
-// const round = playRound(refinedHumanSelection, refinedComputerSelection)
-// let humanScore = 0;
-// let computerScore = 0;
-
-
-
 function getComputerChoice() { 
     const rpsValue = Math.random();
     let computerSelection = "Undefined";
@@ -31,7 +19,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice(humanChoice) {
-    let humanSelection = prompt("Please, select Rock, Paper, or Scissors: ");
+    let humanSelection = prompt("Please, type Rock, Paper, or Scissors: ");
     humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1).toLowerCase();
     return humanSelection;
 }
@@ -88,15 +76,5 @@ function playGame() {
         }
     }
 }
-
-// if (round === win){
-//     humanScore = ++humanScore
-// }
-// else {
-//     if (round === lose) {
-//         computerScore = ++computerScore
-//     }
-// }
-
 
 playGame()
