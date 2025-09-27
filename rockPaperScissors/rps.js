@@ -37,13 +37,64 @@ function getHumanChoice(humanChoice) {
 let humanScore = 0;
 let computerScore = 0;
 
+
 //Create new function named playRound
 //Define two parameters for playRound: humanChoice and computerChoice. 
     //These will take human and computer choices as arguments
 
+// const win = `You Win!`;
+// const lose = `You lose!`;
+// const tie = `Its a Tie! Try again.`;
+
+// function playRound(humanChoice, computerChoice) {
+//     if(humanChoice === computerChoice) {
+//     return tie;
+//     }
+//     else{
+//         if ((humanChoice === "Rock" && computerChoice === "Scissors")|| (humanChoice === "Paper" && computerChoice === "Rock")|| (humanChoice === "Scissors" && computerChoice === "Paper")){
+//             return win;
+//         }
+//         else {
+//             return lose;
+//         }
+//     }
+// }
+// let refinedHumanSelection = getHumanChoice();
+// //Make humanChoice parameter case-insensitive so that players can input variety of selections.
+// refinedHumanSelection = refinedHumanSelection.charAt(0).toUpperCase() + refinedHumanSelection.slice(1).toLowerCase();
+// let refinedComputerSelection = getComputerChoice()
+// console.log("You Chose: " + refinedHumanSelection)
+// console.log("The Computer Chose: " + refinedComputerSelection)
+// //write code for playRound to console.log a string value represent the round winner
+// //Increment the score variables based on round winners
+// if (playRound() === win) {
+//     humanScore === ++humanScore
+// }
+// else {
+//     computerScore === ++computerScore
+// }
+
+// console.log(`The scores are: \nHuman Score: ${humanScore}\nComputer Score: ${computerScore}`); 
+
+
+// console.log(playRound(refinedHumanSelection, refinedComputerSelection))
+
 const win = `You Win!`;
 const lose = `You lose!`;
 const tie = `Its a Tie! Try again.`;
+let refinedHumanSelection = getHumanChoice();
+refinedHumanSelection = refinedHumanSelection.charAt(0).toUpperCase() + refinedHumanSelection.slice(1).toLowerCase();
+let refinedComputerSelection = getComputerChoice()
+let round = playRound()
+
+
+
+if (round === win) {
+    humanScore === ++humanScore;
+}
+else {
+    computerScore === ++computerScore;
+}
 
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === computerChoice) {
@@ -58,24 +109,22 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 }
-let refinedHumanSelection = getHumanChoice();
-//Make humanChoice parameter case-insensitive so that players can input variety of selections.
-refinedHumanSelection = refinedHumanSelection.charAt(0).toUpperCase() + refinedHumanSelection.slice(1).toLowerCase();
-let refinedComputerSelection = getComputerChoice()
-console.log("You Chose: " + refinedHumanSelection)
-console.log("The Computer Chose: " + refinedComputerSelection)
-//write code for playRound to console.log a string value represent the round winner
-//Increment the score variables based on round winners
-if (playRound() === win) {
-    humanScore === ++humanScore
+
+
+//create new function named playGame
+function playGame() {
+    console.log(`The prior scores were: \nHuman Score: ${humanScore}\nComputer Score: ${computerScore}`);
+    if (humanScore === 0 && computerScore === 0){
+        console.log("You Chose: " + refinedHumanSelection);
+        console.log("The Computer Chose: " + refinedComputerSelection);
+        playRound(refinedHumanSelection, refinedComputerSelection);
+        console.log(`The current scores are: \nHuman Score: ${humanScore}\nComputer Score: ${computerScore}`);
+    }
+    
+   
+    
 }
-else {
-    computerScore === ++computerScore
-}
+//Move your playRound function and score variables so that they are declared inside of the new playGame function
+//play 5 rounds by calling playRound 5 times
 
-console.log(`The scores are: \nHuman Score: ${humanScore}\nComputer Score: ${computerScore}`); 
-
-
-console.log(playRound(refinedHumanSelection, refinedComputerSelection))
-
-//
+playGame()
