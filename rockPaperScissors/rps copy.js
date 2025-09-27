@@ -19,7 +19,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice(humanChoice) {
-    let humanSelection = prompt("Please, type Rock, Paper, or Scissors: ");
+    let humanSelection = prompt("Please type Rock, Paper, or Scissors: ");
     humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1).toLowerCase();
     return humanSelection;
 }
@@ -43,23 +43,23 @@ function playGame() {
         }
     }
     
-    alert("Welcome to a new game of Rock Paper Scissors!\nPress the OK button to begin.");
+    alert("Welcome to a new game of Rock Paper Scissors!\nPress the OK/Close button to begin.");
     
     
-    alert(`Starting Scores\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}`);
+    alert(`Starting Scores\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}`);
     
     //Big note: in order to rerun functions, they cannot be in variables, but in fact must be their function form.
     playRound(getHumanChoice(), getComputerChoice());
-    alert(`Round 1 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}\nPress ok to begin round 2`);
+    alert(`Round 1 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}\nPress OK/Close to begin round 2`);
 
     playRound(getHumanChoice(), getComputerChoice());
-    alert(`Round 2 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}\nPress ok to begin round 3`);
+    alert(`Round 2 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}\nPress OK/Close to begin round 3`);
 
     playRound(getHumanChoice(), getComputerChoice());
-    alert(`Round 3 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}\nPress ok to begin round 4`);
+    alert(`Round 3 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}\nPress OK/Close to begin round 4`);
     
     playRound(getHumanChoice(), getComputerChoice());
-    alert(`Round 4 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}\nPress ok to begin the final round`); 
+    alert(`Round 4 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}\nPress OK/Close to begin the final round`); 
     
     playRound(getHumanChoice(), getComputerChoice());
     alert(`Round 5 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}`);    
