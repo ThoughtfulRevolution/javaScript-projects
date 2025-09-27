@@ -36,20 +36,6 @@ function getHumanChoice(humanChoice) {
     return humanSelection;
 }
 
-// function playRound(humanChoice, computerChoice) {
-//     if(humanChoice === computerChoice) {
-//     return tie;
-//     }
-//     else{
-//         if ((humanChoice === "Rock" && computerChoice === "Scissors")|| (humanChoice === "Paper" && computerChoice === "Rock")|| (humanChoice === "Scissors" && computerChoice === "Paper")){
-//             return win;
-//         }
-//         else {
-//             return lose;
-//         }
-//     }
-// }
-
 function playGame() {
    let humanScore = 0;
    let computerScore = 0;
@@ -74,6 +60,7 @@ function playGame() {
     
     alert(`Starting Scores\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}`);
     
+    //Big note: in order to rerun functions, they cannot be in variables, but in fact must be their function form.
     playRound(getHumanChoice(), getComputerChoice());
     alert(`Round 1 complete!\nHuman Score: ${humanScore}\nComputer Score: ${computerScore}\nPress ok to begin round 2`);
 
